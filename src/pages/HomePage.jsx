@@ -136,7 +136,7 @@ const Homepage = () => {
         <button className="previous" onClick={handlePrev} disabled={currentPage === 1}>
           Previous
         </button>
-        <div className="flex gap-2">
+        <div className="flex gap-2 pointer">
           {pageLayout.map((page, idx) => (
             <div
               key={idx}
