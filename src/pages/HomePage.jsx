@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./HomePage.css";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
 
 const pageLayout = [1, 2, 3, "...", 8, 9, 10];
 
@@ -9,6 +9,7 @@ const Homepage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const totalPages = 10;
 
   const fetchPosts = async (page = 1) => {
@@ -42,12 +43,19 @@ const Homepage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <div className="whole">
       {/* Navigation */}
       <div className="nav flex">
         <div className="left flex">Your Name</div>
-        <div className="right flex">
+        <div className="hamburger-menu" onClick={toggleNav}>
+          {isNavOpen ? <FaTimes /> : <FaBars />}
+        </div>
+        <div className={`right flex ${isNavOpen ? "open" : ""}`}>
           {["Blog", "Projects", "About", "Newsletter"].map((item) => (
             <span key={item}>{item}</span>
           ))}
@@ -55,7 +63,7 @@ const Homepage = () => {
             <FaSun />
             <FaMoon />
           </button>
-        </div>
+        </div> 
       </div>
 
       {/* Title */}

@@ -216,6 +216,13 @@
     width: auto;
     padding-top: 0.25rem;
   }
+
+  .hamburger-menu {
+    display: none; /* Hidden by default */
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other content */
+  }
  
 @media (max-width: 1200px) {
     .whole {
@@ -317,6 +324,12 @@
       gap: 0.5rem;
       padding: 1rem 0;
     }
+    .hamburger-menu {
+        display: block; /* Show hamburger icon on mobile */
+      }
+      .right{
+        display: none;
+      }
   }
   
   @media (max-width: 480px) {
@@ -331,4 +344,5 @@
     p {
       font-size: 0.9rem;
     }
+
   }
