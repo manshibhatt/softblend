@@ -66,7 +66,7 @@ const Homepage = () => {
         <div className="title-1">Recent blog posts</div>
         <div className="flex gap-2">
           <div className="left flex-col gap-1">
-            <img src="/src/assets/image-1.svg" alt="Post thumbnail" />
+            <img src="image-1.svg" alt="Post thumbnail" />
             <span className="place-date">Olivia Rhye • 1 Jan 2023</span>
             <h3>UX review presentations</h3>
             <p>How do you create compelling presentations that wow your colleagues and impress your managers?</p>
@@ -79,7 +79,7 @@ const Homepage = () => {
           <div className="right flex-col">
             {[1, 2].map((_, idx) => (
               <div className="one flex" key={idx}>
-                <img src="/src/assets/image-1.svg" alt="Post thumbnail" />
+                <img src="image-1.svg" alt="Post thumbnail" />
                 <div className="flex-col">
                   <span className="place-date">Sunday, 1 Jan 2023</span>
                   <h3>Migrating to Linear 101</h3>
@@ -114,7 +114,7 @@ const Homepage = () => {
                 <div className="title-2 flex">
                 <div className="flex align-center content-between">
                 <h3>{post.title}</h3>
-                  <img src="src/assets/icon.svg" alt="" className="arrow"/>
+                  <img src="icon.svg" alt="" className="arrow"/>
                   </div>
                  
                 </div>
